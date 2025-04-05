@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import prisma from "@/app/libs/prismadb";
 
 interface Iparams {
-  productId?: string | undefined;
+  productId: string ;
 }
 export async function DELETE(request: Request, { params }: { params: Iparams }) {
   const currnetUser = await getCurrentUser();
