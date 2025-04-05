@@ -1,8 +1,11 @@
+
 /** @type {import('postcss-load-config').Config} */
+import { withUt } from "uploadthing/tw";
+
 const config = {
   plugins: {
-    tailwindcss: {},
+   
+    "@tailwindcss/postcss": {},
   },
 };
-
 export default config;
