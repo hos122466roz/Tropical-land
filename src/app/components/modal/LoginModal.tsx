@@ -27,6 +27,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ active, handleActive }) => {
     },
   });
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    setIsLoading(true);
     signIn("credentials", {
       ...data,
       redirect: false,
@@ -35,6 +36,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ active, handleActive }) => {
         toast.success("با موفقیت وارد شدید!");
         router.refresh();
         loginModal.onClose();
+        setIsLoading(false);
       }
       if (callback?.error) {
         toast.error(callback.error);
@@ -91,7 +93,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ active, handleActive }) => {
           disabled:cursor-not-allowed
           hover:bg-green-800"
           >
-            ورود
+            {isLoading ? "Loading..." : "ورود"}
           </button>
         </form>
         <div className="px-8 pb-5">
