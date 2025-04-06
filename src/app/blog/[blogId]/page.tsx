@@ -7,21 +7,22 @@ import BlogClient from "./BlogClient";
 import getBlogs from "@/app/actions/getBlogs";
 import BlogCard from "../BlogCard";
 import ButtonAni from "@/app/components/common/button-ani/ButtonAni";
+import Image from "next/image";
 
-interface IParams{
-  blogId: string
+interface IParams {
+  blogId: string;
 }
-const BlogPage =async ({params}:{params:IParams}) => {
-  const blog=await getBlogById(params)
-  const blogs=await getBlogs()
-  if(!blog){
-    return <h1>بلاگ مورد نظر پیدا نشد!</h1>
+const BlogPage = async ({ params }: { params: Promise<IParams> }) => {
+  const blog = await getBlogById(params);
+  const blogs = await getBlogs();
+  if (!blog) {
+    return <h1>بلاگ مورد نظر پیدا نشد!</h1>;
   }
   return (
     <section className="mt-24">
       <div className="h-[35vh]  overflow-hidden relative flex justify-start pr-10 md:pr-24 items-center ">
         <div className="w-full absolute h-full top-0 right-0 z-30 bg-black/30"></div>
-        <img
+        <Image
           src={img1}
           alt=""
           className="h-full w-full  right-0 absolute top-0 object-cover  "
