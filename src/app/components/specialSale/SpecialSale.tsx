@@ -60,7 +60,7 @@ const SpecialSale:React.FC<SpecialSaleProps> =  ({ products }) => {
             <SlideNextButton />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-            {products?.map((product) => (
+            {products?.map((product:any) => (
               <SwiperSlide
                 className="border-1 border-gray-700/20 p-2 rounded-[.5rem] group text-center w-full   overflow-hidden"
                 key={product.id}
