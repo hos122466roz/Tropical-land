@@ -22,7 +22,7 @@ const Blogs = async () => {
         </h3>
       </div>
       <div className="grid grid-cols-1  content-center md:grid-cols-2 lg:grid-cols-3  gap-8">
-        {blogs?.map((blog) => (
+        {blogs?.map((blog:any) => (
             <BlogCard key={blog.id} data={blog}/>
  
         ))}
