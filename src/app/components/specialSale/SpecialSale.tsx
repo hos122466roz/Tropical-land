@@ -29,7 +29,6 @@ const itmes = [
 ];
 
 const SpecialSale:React.FC<SpecialSaleProps> =  ({ products }) => {
-  console.log(products)
       const router=useRouter()
   
   if (!products) {
