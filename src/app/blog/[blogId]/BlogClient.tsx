@@ -7,7 +7,7 @@ import { LiaCommentsSolid } from "react-icons/lia";
 interface BlogClientProps {
   blog?: SafeBlog & {
     user: SafeUser;
-  };
+  } |null
 }
 
 const BlogClient: React.FC<BlogClientProps> = ({ blog }) => {

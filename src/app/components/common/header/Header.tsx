@@ -15,9 +15,10 @@ import { FaFileContract } from "react-icons/fa6";
 import Avatar from "../avatar/Avatar";
 import Li from "../li/LI";
 import Image from "next/image";
+import { SafeUser } from "@/app/types";
 
 interface HeaderProps {
-  currentUser: User | null;
+  currentUser?: SafeUser | null;
 }
 const Header: React.FC<HeaderProps> = ({ currentUser }) => {
   const loginModal = useLoginModal();

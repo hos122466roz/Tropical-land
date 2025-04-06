@@ -4,7 +4,7 @@ interface IParams {
   productId?: string;
 }
 const ProductPage = async ({ params }: { params: Promise<IParams> }) => {
-  const product = await getProductById(params);
+  const product = await getProductById( await params);
   if(!product){
     return <h1>محصول مورد نظر وجود ندارد</h1>
   }

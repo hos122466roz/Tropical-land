@@ -24,6 +24,7 @@ export default async function getBlogById(params:IParams){
         ...blog.user,
         createdAt: blog.user.createdAt.toString(),
         updatedAt: blog.user.updatedAt.toString(),
+        emailVerified: blog.user.emailVerified?.toISOString() || null,
       },
     };
 

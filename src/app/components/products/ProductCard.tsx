@@ -7,7 +7,7 @@ import { BsBag } from "react-icons/bs";
 import { useRouter } from "next/navigation";
 interface ProductCardProps {
   data: SefProduct;
-  currentUser: SafeUser;
+  currentUser?: SafeUser |null ;
 }
 const ProductCard: React.FC<ProductCardProps> = ({ data, currentUser }) => {
     const router=useRouter()
