@@ -17,7 +17,7 @@ const Products = async () => {
           </h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {products?.map((product) => (
+          {products?.map((product:any) => (
             <ProductCard data={product} currentUser={currentUser} key={product.id}/>
             // <div
             //   className="border-1 border-gray-700/20 p-2 rounded-[.5rem] group text-center w-full   overflow-hidden"
