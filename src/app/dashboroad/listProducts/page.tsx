@@ -26,7 +26,7 @@ const ListProduct = async () => {
           </tr>
         </thead>
         <tbody>
-          {products?.map((item) => (
+          {products?.map((item:any) => (
             <tr
               key={item.id}
               className=" font-Dana-medium border-b last:border-b-0 border-b-gray-500/20"
