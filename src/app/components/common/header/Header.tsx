@@ -144,7 +144,7 @@ const Header: React.FC<HeaderProps> = ({ currentUser }) => {
           </ul>
         </nav>
         <div>
-          <img src={img} alt="logo" />
+          <Image src={img} alt="logo" />
         </div>
         <div className="flex  items-center gap-x-6">
           {currentUser?.name ? (
