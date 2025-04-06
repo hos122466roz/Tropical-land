@@ -12,7 +12,7 @@ import { BsBag } from "react-icons/bs";
 import { SefProduct } from "@/app/types";
 import { useRouter } from "next/navigation";
 interface SpecialSaleProps{
-    products:SefProduct|null
+    products:any
 }
 const itmes = [
   {
@@ -29,6 +29,7 @@ const itmes = [
 ];
 
 const SpecialSale:React.FC<SpecialSaleProps> =  ({ products }) => {
+  console.log(products)
       const router=useRouter()
   
   if (!products) {
@@ -60,7 +61,7 @@ const SpecialSale:React.FC<SpecialSaleProps> =  ({ products }) => {
             <SlideNextButton />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-            {products?.map((product:any) => (
+            {products.map((product:any) => (
               <SwiperSlide
                 className="border-1 border-gray-700/20 p-2 rounded-[.5rem] group text-center w-full   overflow-hidden"
                 key={product.id}
