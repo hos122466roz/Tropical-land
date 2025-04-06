@@ -38,7 +38,7 @@ const BlogPage = async ({ params }: { params: Promise<IParams> }) => {
         </div>
 
         <div className="grid md:grid-cols-2 grid-cols-1 gap-8 my-12">
-          {blogs?.splice(0, 2).map((blog) => (
+          {blogs?.splice(0, 2).map((blog:any) => (
             <BlogCard data={blog} key={blog.id} />
           ))}
         </div>
