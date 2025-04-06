@@ -9,7 +9,7 @@ import BlogCard from "../BlogCard";
 import ButtonAni from "@/app/components/common/button-ani/ButtonAni";
 
 interface IParams{
-  blogId?: string
+  blogId: string
 }
 const BlogPage =async ({params}:{params:IParams}) => {
   const blog=await getBlogById(params)
