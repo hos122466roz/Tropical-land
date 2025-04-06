@@ -5,10 +5,13 @@ import prisma from "@/app/libs/prismadb";
 interface IParams {
   productId: string;
 }
-export async function DELETE(request: Request, { params }: { params: IParams }) {
+export async function DELETE(
+  request: Request,
+  { params }: { params: Promise<IParams> }
+) {
   const currnetUser = await getCurrentUser();
   if (!currnetUser) return NextResponse.error();
-  const { productId } = params;
+  const { productId } = await params;
   if (!productId || typeof productId !== "string") {
     throw new Error("Invalid ID");
   }
