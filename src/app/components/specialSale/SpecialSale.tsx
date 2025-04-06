@@ -31,7 +31,7 @@ const itmes = [
 const SpecialSale:React.FC<SpecialSaleProps> =  ({ products }) => {
       const router=useRouter()
   
-  if (products?.length === 0) {
+  if (!products) {
     return <h2>no product</h2>;
   }
   return (
