@@ -12,8 +12,8 @@ import Image from "next/image";
 interface IParams {
   blogId: string;
 }
-const BlogPage = async ({ params }: { params: IParams }) => {
-  const blog = await getBlogById(params);
+const BlogPage = async ({ params }: { params: Promise<IParams> }) => {
+  const blog = await getBlogById( await params);
   const blogs = await getBlogs();
   if (!blog) {
     return <h1>بلاگ مورد نظر پیدا نشد!</h1>;
