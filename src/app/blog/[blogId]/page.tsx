@@ -49,7 +49,7 @@ const BlogPage = async ({ params }: { params: Promise<IParams> }) => {
           <div className=" font-Dana">
             <div className=" w-full flex items-start flex-col md:flex-row ">
               <div className="size-26">
-                <img
+                <Image
                   src={img2}
                   alt="profile"
                   className="object-cover w-full h-full"
@@ -68,7 +68,7 @@ const BlogPage = async ({ params }: { params: Promise<IParams> }) => {
 
                 <div className="flex items-start flex-col md:flex-row  mt-8 border-1 border-gray-400/10 p-4">
                   <div className="size-24">
-                    <img
+                    <Image
                       src={img3}
                       alt="profile"
                       className="object-cover w-full h-full"
@@ -93,7 +93,7 @@ const BlogPage = async ({ params }: { params: Promise<IParams> }) => {
             </div>
             <div className="flex items-start flex-col md:flex-row  mt-14">
               <div className="size-26">
-                <img
+                <Image
                   src={img4}
                   alt="profile"
                   className="object-cover w-full h-full"
