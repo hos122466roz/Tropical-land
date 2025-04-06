@@ -3,7 +3,7 @@ import ButtonAni from "@/app/components/common/button-ani/ButtonAni";
 interface IParams {
   productId?: string;
 }
-const ProductPage = async ({ params }: { params: IParams }) => {
+const ProductPage = async ({ params }: { params: Promise<IParams> }) => {
   const product = await getProductById(params);
   if(!product){
     return <h1>محصول مورد نظر وجود ندارد</h1>
